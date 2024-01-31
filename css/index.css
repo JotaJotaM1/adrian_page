@@ -88,3 +88,19 @@ main,
     padding-top: 20px;
     font-size: 20px;
 }
+
+.containGeneralCard,
+.cardServices {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgServices {
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    border: 7px solid var(--greeGeneral);
+}
