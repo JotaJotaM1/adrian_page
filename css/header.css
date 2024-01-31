@@ -1,0 +1,141 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --textNav: rgb(255, 255, 255);
+  --blueDarkGeneral: rgb(2, 2, 51);
+  --colorIconMenu: white;
+  --hoverAndText: aqua;
+  --textGeneral: rgb(2, 2, 51);
+  --whiteGeneral: white;
+}
+
+.containFather {
+  position: fixed;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: green;
+  z-index: 999;
+}
+
+.fatherlogoHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logoHeader {
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  background-color: var(--whiteGeneral);
+}
+
+.navList {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.navList li {
+  position: relative;
+  list-style: none;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.navList li a {
+  text-decoration: none;
+  color: var(--textNav);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navList li:hover a {
+  color: var(--hoverAndText);
+}
+
+.navList li .underline-text::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: aqua;
+  transition: width 0.3s ease;
+}
+
+.navList li:hover .underline-text::before {
+  width: 100%;
+}
+
+.openMenu,
+.closeMenu {
+  display: none;
+}
+
+.containH1Avatar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 780px) {
+
+  .openMenu,
+  .closeMenu {
+    display: block;
+    border: 0;
+    font-size: 1.5rem;
+    color: var(--colorIconMenu);
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .closeMenu{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: green;
+    padding: 2rem;
+    transition: 0.5s;
+  }
+
+  .nav.visible {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
+  }
+
+  .navList {
+    flex-direction: column;
+    align-items: start;
+    row-gap: 2rem;
+  }
+  .underline-text{
+    display: block;
+  }
+}

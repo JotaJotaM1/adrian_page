@@ -1,0 +1,124 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+:root {
+    --textNav: rgb(255, 255, 255);
+    --blueDarkGeneral: rgb(2, 2, 51);
+    --colorIconMenu: white;
+    --hoverAndText: aqua;
+    --textGeneral: rgb(2, 2, 51);
+    --whiteGeneral: white;
+}
+
+.iconsBTG, .bi-insta, .iconsBTGlink, .iconsBTGwha{
+    font-size: 30px;
+    color: var(--blueDarkGeneral);
+}
+.iconsBTGlink{
+    color: #0057B5;
+}
+.iconsBTGwha{
+    color: #4CAF50;
+}
+.iconsBTGwha
+.bi-insta{
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #FD1D1D, #F56040, #FFC837, #4CAF50, #0057B5);
+    background-clip: text;
+    color: transparent; 
+}
+
+#btn-mas {
+    display: none;
+}
+
+.containerBtnFixed {
+    position: fixed;
+    z-index: 9999;
+    bottom: 15px;
+    right: 15px;
+}
+
+.redes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.redes a,
+.icon-mas2 {
+    display: block;
+    text-decoration: none;
+    background-color: var(--whiteGeneral);
+    color: var(--whiteGeneral);
+    width: 50px;
+    height: 50px;
+    line-height: 52px;
+    text-align: center;
+    border-radius: 100%;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
+    transition: all 500ms ease;
+}
+.icon-mas2{
+    line-height: 50px;
+    background-color: green;
+}
+.prueba{
+    color: var(black);
+}
+
+.redes a:hover {
+    background-color: var(--textGold);
+    color: var(--textBlueBold);
+
+}
+
+.redes a {
+    margin: -15px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#btn-mas:checked~.redes a {
+    margin-bottom: 20px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.icon-mas2 { 
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#btn-mas:checked~.btn-mas .icon-mas2 {
+    transform: rotate(90deg);
+    font-size: 30px;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .redes a,
+    .icon-mas2 {
+        width: 65px;
+        height: 65px;
+        line-height: 65px;
+    }
+    .iconsBTG{
+        font-size:30px ;
+
+    }
+
+    .icon-mas2{
+        font-size: 20px;
+    }
+    #btn-mas:checked~.btn-mas .icon-mas2 {
+        transform: rotate(90deg);
+        font-size: 40px;
+    }
+
+}
