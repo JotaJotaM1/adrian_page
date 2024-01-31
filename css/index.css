@@ -1,10 +1,90 @@
 @import url(reset.css);
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
+* {
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
 }
-body{
+
+:root {
+    --greeGeneral: #8dc63f;
+    --whiteGeneral: #ffff;
+}
+
+body {
     font-family: "Montserrat", sans-serif;
+}
+
+main,
+.sectionSlider,
+.containSlider,
+.containButtonSlider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectionSlider {
+    margin-top: 30px;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background: url(../img/home-painter-slider-1.jpg) no-repeat center/cover;
+}
+
+.rowSlider {
+    height: auto;
+    width: 70px;
+    margin-bottom: 30px;
+}
+
+.containSlider {
+    text-align: center;
+    position: relative;
+    height: 500px;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.containButtonSlider {
+    row-gap: 10px;
+}
+
+.titleH1Slider {
+    font-weight: 400;
+    font-size: 60px;
+}
+
+.titleH2Slider {
+    font-size: 20px;
+}
+
+.containButtonSlider {
+    margin: 30px 0 10px;
+}
+
+.buttonOneSlider,
+.buttonOTwoSlider {
+    height: 4rem;
+    width: 20rem;
+    border: none;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+.buttonOneSlider {
+    color: var(--whiteGeneral);
+    background-color: var(--greeGeneral);
+}
+
+.buttonOTwoSlider {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 2px solid var(--greeGeneral);
+    color: var(--greeGeneral);
+}
+
+.textButtonsSlider {
+    padding-top: 20px;
+    font-size: 20px;
 }
