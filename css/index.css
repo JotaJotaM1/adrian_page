@@ -59,7 +59,7 @@ main,
 }
 
 .titleH2Slider {
-    padding: 0px 30px;
+    padding: 0px 20px;
     font-size: 20px;
 }
 
@@ -116,14 +116,14 @@ main,
 }
 
 .titleH2Services {
-    padding: 15% 20px 5%;
+    padding: 15% 8px 5%;
     text-align: center;
     font-size: 32px;
     line-height: 3rem;
 }
 
 .textH2Services {
-    padding: 0 40px 50px;
+    padding: 0 26px 50px;
     font-size: 25px;
     color: var(--blackText);
 }
