@@ -1,0 +1,159 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root {
+    --greeGeneral: #8dc63f;
+    --whiteGeneral: #ffff;
+    --blackText: #1e1d24;
+    --grayText: #79787F;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--greeGeneral);
+}
+
+.containFooter {
+    font-family: 'Lato', sans-serif;
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logoFooter {
+    height: 100px;
+    width: 100px;
+    margin: 40px 0 20px;
+    border-radius: 100%;
+}
+
+.footerIconRedes {
+    color: var(--whiteGeneral);
+    font-size: 30px;
+    padding: 0 10px;
+}
+
+.containerFatherInfo {
+    margin: 20px 0;
+}
+
+
+.containInfoEmail,
+.containInfoLocation,
+.containInfoPhone,
+.containRut,
+.containSocial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.mailto-link,
+.tel-link {
+    text-decoration: none;
+}
+
+.iconFooter {
+    color: var(--whiteGeneral);
+    font-size: 25px;
+}
+
+.textEmail,
+.textLocation,
+.textPhone {
+    color: var(--whiteGeneral);
+    padding-left: 15px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.copyRight {
+    padding: 10px;
+    color: var(--whiteGeneral);
+    font-size: 10px;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .containFatherFooter {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .containFooter {
+        padding: 40px 0;
+    }
+
+    .logoFooter {
+        margin: 0;
+    }
+
+    .footerIconRedes {
+        padding: 2px;
+    }
+
+    .containerFatherInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .copyRight {
+        width: 103px;
+        color: var(--whiteGeneral);
+        font-size: 10px;
+        text-align: center;
+        font-weight: 300;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .containFatherFooter {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        max-width: 1900px;
+    }
+
+    .containFooter {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .containSocial {
+        width: 300px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .footerIconRedes {
+        font-size: 45px;
+    }
+
+}
+
+@media screen and (min-width: 1900px) {
+    .containFatherFooter {
+        justify-content: space-between;
+    }
+}

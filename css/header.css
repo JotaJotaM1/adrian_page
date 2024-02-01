@@ -9,7 +9,7 @@
   --textNav: rgb(255, 255, 255);
   --blueDarkGeneral: rgb(2, 2, 51);
   --colorIconMenu: white;
-  --greenGeneral:#8dc63f;
+  --greenGeneral: #8dc63f;
   --textGeneral: rgb(2, 2, 51);
   --whiteGeneral: white;
 }
@@ -22,7 +22,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color:var(--greenGeneral);
+  background-color: var(--greenGeneral);
   z-index: 999;
 }
 
@@ -103,7 +103,7 @@
     cursor: pointer;
   }
 
-  .closeMenu{
+  .closeMenu {
     display: flex;
     justify-content: flex-end;
   }
@@ -119,15 +119,18 @@
     top: 0;
     right: 0;
     left: 0;
+    background: url(../img/rodillo.png) no-repeat bottom 30px right 30px / 80px;
     background-color: var(--greenGeneral);
     padding: 2rem;
     transition: 0.5s;
+
   }
 
   .nav.visible {
     opacity: 1;
     visibility: visible;
     transition: 0.5s;
+
   }
 
   .navList {
@@ -135,7 +138,8 @@
     align-items: start;
     row-gap: 2rem;
   }
-  .underline-text{
+
+  .underline-text {
     display: block;
   }
 }

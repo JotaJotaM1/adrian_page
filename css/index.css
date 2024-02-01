@@ -9,6 +9,8 @@
 :root {
     --greeGeneral: #8dc63f;
     --whiteGeneral: #ffff;
+    --blackText: #1e1d24;
+    --grayText: #79787F;
 }
 
 body {
@@ -57,6 +59,7 @@ main,
 }
 
 .titleH2Slider {
+    padding: 0px 30px;
     font-size: 20px;
 }
 
@@ -65,7 +68,8 @@ main,
 }
 
 .buttonOneSlider,
-.buttonOTwoSlider {
+.buttonOTwoSlider,
+.buttonCallToAction {
     height: 4rem;
     width: 20rem;
     border: none;
@@ -86,11 +90,13 @@ main,
 
 .textButtonsSlider {
     padding-top: 20px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .containGeneralCard,
-.cardServices {
+.cardServices,
+.sectionServices,
+.containCallToAction {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -98,9 +104,147 @@ main,
     align-items: center;
 }
 
+.rowZigzagServices {
+    padding-bottom: 30px;
+}
+
 .imgServices {
     height: 200px;
     width: 200px;
     border-radius: 100%;
     border: 7px solid var(--greeGeneral);
+}
+
+.titleH2Services {
+    padding: 15% 20px 5%;
+    text-align: center;
+    font-size: 32px;
+    line-height: 3rem;
+}
+
+.textH2Services {
+    padding: 0 40px 50px;
+    font-size: 25px;
+    color: var(--blackText);
+}
+
+.imgCardServiceOne,
+.imgCardServiceTwo,
+.imgCardServiceThree,
+.imgCardServiceFour {
+    height: 230px;
+    width: 230px;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+    border: 7px solid var(--greeGeneral);
+}
+
+.imgCardServiceOne::before,
+.imgCardServiceTwo::before,
+.imgCardServiceThree::before,
+.imgCardServiceFour::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.imgCardServiceOne::before {
+    background-image: url(../img/services_interior.jpg);
+}
+
+.imgCardServiceTwo::before {
+    background-image: url(../img/services_exterrior8.jpg);
+}
+
+.imgCardServiceThree::before {
+    background-image: url(../img/services_comercial.jpg);
+}
+
+.imgCardServiceFour::before {
+    background-image: url(../img/services_home.jpg);
+}
+
+.titleH3Services {
+    color: var(--blackText);
+    font-size: 25px;
+    padding: 30px 0;
+}
+
+.textH3Services {
+    padding: 0 52px 30px;
+    color: var(--grayText);
+    font-size: 20px;
+}
+
+.sectionCallToAction {
+    background-color: var(--greeGeneral);
+    width: 100%;
+}
+
+.containCallToAction {
+    text-align: left;
+    padding: 40px 50px;
+}
+
+.textOneCall,
+.textTwoCall {
+    padding: 10px 0;
+    font-size: 27px;
+    line-height: 1.3em;
+    color: var(--whiteGeneral);
+}
+
+.buttonCallToAction {
+    height: 4rem;
+    width: 20rem;
+    border: none;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+.buttonCallToAction {
+    margin: 30px 0 40px;
+    color: var(--blackText);
+    background-color: var(--whiteGeneral);
+}
+
+.containAboutUs{
+    padding: 20px;
+}
+.titleAboutUs{
+    padding-top: 40px;
+    line-height: 1.344em;
+    font-size: 40px;
+}
+.rowZigzagAboutUs{
+    padding: 10px 0 30px;
+}
+.textAboutUs{
+    line-height: 1.344em;
+    font-size: 25px;
+    padding-bottom:40px;
+}
+.checkAboutUs{
+    font-size: 80px;
+    color: var(--greeGeneral);
+}
+.titleH4AboutUs{
+    font-size: 25px;
+    padding: 10px 0;
+    line-height: 1.344em;
+}
+.textH4AboutUs{
+    padding: 10px 0;
+    color: #79787F;
+    font-size: 20px;
+    line-height: 1.344em;
 }

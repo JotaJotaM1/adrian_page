@@ -14,10 +14,14 @@
     --textGeneral: rgb(2, 2, 51);
     --whiteGeneral: white;
 }
+.bi-telephone-fill{
+    color: var(--greenGeneral);
+}
 
-.iconsBTG, .bi-insta, .iconsBTGlink, .iconsBTGwha{
+.iconsBTG, .iconsBTGwha{
     font-size: 30px;
-    color: var(--blueDarkGeneral);
+    color: var(--greenGeneral);
+
 }
 .iconsBTGlink{
     color: #0057B5;
