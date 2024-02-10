@@ -1,5 +1,5 @@
 @import url(reset.css);
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
   box-sizing: border-box;
@@ -22,7 +22,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--greenGeneral);
+  background: rgb(141, 198, 63);
+  /* background: linear-gradient(
+    0deg,
+    rgba(141, 198, 63, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  ); */
   z-index: 999;
 }
 
@@ -44,6 +49,7 @@
   list-style-type: none;
   display: flex;
   align-items: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .navList li {
@@ -92,7 +98,6 @@
 }
 
 @media screen and (max-width: 780px) {
-
   .openMenu,
   .closeMenu {
     display: block;
@@ -123,14 +128,12 @@
     background-color: var(--greenGeneral);
     padding: 2rem;
     transition: 0.5s;
-
   }
 
   .nav.visible {
     opacity: 1;
     visibility: visible;
     transition: 0.5s;
-
   }
 
   .navList {
