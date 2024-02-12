@@ -259,7 +259,7 @@ main,
     cursor: pointer;
     margin: 30px 0 40px;
     color: var(--whiteGeneral);
-    background-color: var(--blackText);
+    background-color: black;
 }
 
 .buttonCallToAction:hover {

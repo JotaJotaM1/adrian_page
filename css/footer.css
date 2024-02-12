@@ -19,7 +19,7 @@ footer {
     justify-content: center;
     align-items: center;
     font-family: "Montserrat", sans-serif;
-    background-color: var(--blackText);
+    background-color: black
 }
 
 .containFooter {
