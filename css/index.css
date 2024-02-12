@@ -31,7 +31,7 @@ main,
 
 .sectionSlider {
     margin-top: 30px;
-    height: 95vh;
+    height: 800px;
     width: 100%;
     position: relative;
     background: url(../img/home-painter-slider-1.jpg) no-repeat center/cover;
@@ -55,7 +55,7 @@ main,
 
 .titleH1Slider {
     font-weight: 500;
-    font-size: 53px;
+    font-size: 50px;
 }
 
 .titleH2Slider {
