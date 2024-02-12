@@ -7,11 +7,9 @@
 
 :root {
   --textNav: rgb(255, 255, 255);
-  --blueDarkGeneral: rgb(2, 2, 51);
-  --colorIconMenu: white;
-  --greenGeneral: #8dc63f;
-  --textGeneral: rgb(2, 2, 51);
+  --orangeGeneral: #E64C34;
   --whiteGeneral: white;
+  --blackGeneral: black;
 }
 
 .containFather {
@@ -22,12 +20,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgb(141, 198, 63);
-  /* background: linear-gradient(
-    0deg,
-    rgba(141, 198, 63, 1) 0%,
-    rgba(253, 187, 45, 1) 100%
-  ); */
+  background: var(--blackGeneral);
   z-index: 999;
 }
 
@@ -39,10 +32,8 @@
 }
 
 .logoHeader {
-  height: 60px;
-  width: 60px;
-  border-radius: 100%;
-  background-color: var(--whiteGeneral);
+  height: auto;
+  width: 10rem;
 }
 
 .navList {
@@ -66,10 +57,6 @@
   font-weight: bold;
 }
 
-.navList li:hover a {
-  color: var(--hoverAndText);
-}
-
 .navList li .underline-text::before {
   content: "";
   position: absolute;
@@ -77,7 +64,7 @@
   left: 0;
   width: 0;
   height: 3px;
-  background-color: aqua;
+  background-color: var(--orangeGeneral);
   transition: width 0.3s ease;
 }
 
@@ -125,7 +112,7 @@
     right: 0;
     left: 0;
     background: url(../img/rodillo.png) no-repeat bottom 30px right 30px / 80px;
-    background-color: var(--greenGeneral);
+    background-color: var(--blackGeneral);
     padding: 2rem;
     transition: 0.5s;
   }

@@ -7,8 +7,9 @@
 }
 
 :root {
-    --greeGeneral: #8dc63f;
+    --greeGeneral: #E64C34;
     --whiteGeneral: #ffff;
+    --blackGeneral: black;
     --blackText: #1e1d24;
     --grayText: #79787F;
 }
@@ -36,9 +37,7 @@ main,
 }
 
 .rowSlider {
-    height: auto;
-    width: 70px;
-    margin-bottom: 30px;
+    width: 90px;
 }
 
 .containSlider {
@@ -84,8 +83,12 @@ main,
 
 .buttonOTwoSlider {
     background-color: rgba(255, 255, 255, 0.7);
-    border: 2px solid var(--greeGeneral);
-    color: var(--greeGeneral);
+    border: 2px solid var(--blackGeneral);
+    color: var(--blackGeneral);
+}
+.buttonOTwoSlider:hover {
+    background-color: black;
+    color: white;
 }
 
 .textButtonsSlider {

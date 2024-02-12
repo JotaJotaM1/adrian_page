@@ -7,7 +7,7 @@
 }
 
 :root {
-    --greeGeneral: #8dc63f;
+    --orangeGeneral: #E64C34;
     --whiteGeneral: #ffff;
     --blackText: #1e1d24;
     --grayText: #79787F;
@@ -19,7 +19,7 @@ footer {
     justify-content: center;
     align-items: center;
     font-family: "Montserrat", sans-serif;
-    background-color: var(--greeGeneral);
+    background-color: var(--orangeGeneral);
 }
 
 .containFooter {

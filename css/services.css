@@ -7,7 +7,7 @@
 }
 
 :root {
-    --greeGeneral: #8dc63f;
+    --orangeGeneral: #E64C34;
     --whiteGeneral: #ffff;
     --blackText: #1e1d24;
     --grayText: #79787f;
@@ -48,8 +48,8 @@ main {
     width: 20rem;
     border-radius: 0.2rem;
     background-color: var(--whiteGeneral);
-    border: 2px solid var(--greeGeneral);
-    color: var(--greeGeneral);
+    border: 2px solid var(--orangeGeneral);
+    color: var(--orangeGeneral);
     margin: 20px 0;
     font-weight: 500;
 }
