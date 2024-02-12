@@ -55,7 +55,7 @@ main,
 
 .titleH1Slider {
     font-weight: 500;
-    font-size: 54px;
+    font-size: 53px;
 }
 
 .titleH2Slider {
@@ -101,11 +101,13 @@ main,
     background-color: rgba(255, 255, 255, 0.7);
     border: 2px solid var(--blackGeneral);
     color: var(--blackGeneral);
+    margin-bottom: 20px;
 }
 
 .buttonOTwoSlider:hover {
     background-color: black;
     color: white;
+    
 }
 
 .containGeneralCard,
@@ -208,6 +210,12 @@ main,
     margin: 40px 0;
 }
 
+.sectionWhyChoose{
+    width: 100%;
+    background-color: black;
+    color: var(--whiteGeneral);
+}
+
 .ulWhyChoose {
     display: flex;
     flex-direction: column;
@@ -234,17 +242,17 @@ main,
 }
 
 .sectionCallToAction {
-    height: 70vh;
+    height:65vh;
     text-align: left;
-    padding: 40px 50px;
+    padding: 40px 30px;
     background: url(../img/pintando-pared.jpg) no-repeat bottom right/contain;
     background-color: var(--orangeGeneral);
 }
 
-.textOneCall,
-.textTwoCall {
+.textOneCall{
+    text-align: left;
     padding: 10px 0;
-    font-size: 27px;
+    font-size: 41px;
     line-height: 1.3em;
     color: var(--whiteGeneral);
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
