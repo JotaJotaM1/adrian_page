@@ -7,7 +7,7 @@
 }
 
 :root {
-    --greeGeneral: #E64C34;
+    --orangeGeneral: #E64C34;
     --whiteGeneral: #ffff;
     --blackGeneral: black;
     --blackText: #1e1d24;
@@ -21,7 +21,8 @@ body {
 main,
 .sectionSlider,
 .containSlider,
-.containButtonSlider {
+.containButtonSlider,
+.containWhyChoose {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,7 +31,7 @@ main,
 
 .sectionSlider {
     margin-top: 30px;
-    height: 100vh;
+    height: 95vh;
     width: 100%;
     position: relative;
     background: url(../img/home-painter-slider-1.jpg) no-repeat center/cover;
@@ -43,8 +44,8 @@ main,
 .containSlider {
     text-align: center;
     position: relative;
-    height: 500px;
-    width: 90%;
+    height: 600px;
+    width: 95%;
     background-color: rgba(255, 255, 255, 0.7);
 }
 
@@ -53,12 +54,12 @@ main,
 }
 
 .titleH1Slider {
-    font-weight: 400;
-    font-size: 60px;
+    font-weight: 500;
+    font-size: 54px;
 }
 
 .titleH2Slider {
-    padding: 0px 20px;
+    padding: 20px 0;
     font-size: 20px;
 }
 
@@ -68,17 +69,32 @@ main,
 
 .buttonOneSlider,
 .buttonOTwoSlider,
-.buttonCallToAction {
+.buttonCallToAction,
+.btn-services {
     height: 4rem;
     width: 20rem;
     border: none;
-    border-radius: 0.2rem;
+    border-radius: 0.5rem;
     cursor: pointer;
 }
 
-.buttonOneSlider {
+.buttonOneSlider,
+.btn-services {
     color: var(--whiteGeneral);
-    background-color: var(--greeGeneral);
+    background-color: var(--orangeGeneral);
+}
+
+.btn-services {
+    height: 4rem;
+    width: 15rem;
+    margin-bottom: 70px;
+    font-weight: 500;
+}
+
+.btn-services:hover {
+    background-color: var(--whiteGeneral);
+    color: var(--orangeGeneral);
+    border: 4px solid var(--orangeGeneral);
 }
 
 .buttonOTwoSlider {
@@ -86,14 +102,10 @@ main,
     border: 2px solid var(--blackGeneral);
     color: var(--blackGeneral);
 }
+
 .buttonOTwoSlider:hover {
     background-color: black;
     color: white;
-}
-
-.textButtonsSlider {
-    padding-top: 20px;
-    font-size: 18px;
 }
 
 .containGeneralCard,
@@ -115,14 +127,16 @@ main,
     height: 200px;
     width: 200px;
     border-radius: 100%;
-    border: 7px solid var(--greeGeneral);
+    border: 7px solid var(--orangeGeneral);
 }
 
-.titleH2Services {
+.titleH2Services,
+.titleAboutUs {
     padding: 15% 8px 5%;
     text-align: center;
-    font-size: 32px;
+    font-size: 40px;
     line-height: 3rem;
+    font-weight: 500;
 }
 
 .textH2Services {
@@ -140,7 +154,8 @@ main,
     overflow: hidden;
     border-radius: 50%;
     position: relative;
-    border: 7px solid var(--greeGeneral);
+    border: 7px solid var(--orangeGeneral);
+    box-shadow: 0px 0px 15px -3px var(--orangeGeneral);
 }
 
 .imgCardServiceOne::before,
@@ -184,19 +199,46 @@ main,
 
 .textH3Services {
     text-align: left;
-    padding: 0 25px 30px;
+    padding: 0 25px 50px;
     color: var(--grayText);
     font-size: 20px;
 }
 
+.sectionAboutUs {
+    margin: 40px 0;
+}
+
+.ulWhyChoose {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px 0 40px;
+}
+
+.listWhyChoose {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.checkWhyChoose {
+    font-size: 50px;
+    color: var(--orangeGeneral);
+}
+
 .sectionCallToAction {
-    background-color: var(--greeGeneral);
+    background-color: var(--orangeGeneral);
     width: 100%;
 }
 
-.containCallToAction {
+.sectionCallToAction {
+    height: 70vh;
     text-align: left;
     padding: 40px 50px;
+    background: url(../img/pintando-pared.jpg) no-repeat bottom right/contain;
+    background-color: var(--orangeGeneral);
 }
 
 .textOneCall,
@@ -205,6 +247,8 @@ main,
     font-size: 27px;
     line-height: 1.3em;
     color: var(--whiteGeneral);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
+
 }
 
 .buttonCallToAction {
@@ -213,10 +257,12 @@ main,
     border: none;
     border-radius: 0.2rem;
     cursor: pointer;
+    margin: 30px 0 40px;
+    color: var(--whiteGeneral);
+    background-color: var(--blackText);
 }
 
-.buttonCallToAction {
-    margin: 30px 0 40px;
+.buttonCallToAction:hover {
     color: var(--blackText);
     background-color: var(--whiteGeneral);
 }
@@ -226,24 +272,34 @@ main,
 }
 
 .titleAboutUs {
-    padding-top: 40px;
+    padding: 0 0 0;
+    text-align: center;
     line-height: 1.344em;
     font-size: 40px;
 }
 
+.cardAboutUs .rowSlider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
 .rowZigzagAboutUs {
-    padding: 10px 0 30px;
+    width: 90px;
 }
 
 .textAboutUs {
+    color: var(--blackText);
+    text-align: center;
     line-height: 1.344em;
     font-size: 25px;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
 }
 
 .checkAboutUs {
     font-size: 80px;
-    color: var(--greeGeneral);
+    color: var(--orangeGeneral);
 }
 
 .titleH4AboutUs {

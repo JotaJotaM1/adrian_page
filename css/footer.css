@@ -19,7 +19,7 @@ footer {
     justify-content: center;
     align-items: center;
     font-family: "Montserrat", sans-serif;
-    background-color: var(--orangeGeneral);
+    background-color: var(--blackText);
 }
 
 .containFooter {
@@ -34,15 +34,14 @@ footer {
 }
 
 .logoFooter {
-    height: 100px;
-    width: 100px;
+    height: auto;
+    width: 15rem;
     margin: 40px 0 20px;
-    border-radius: 100%;
 }
 
 .footerIconRedes {
     color: var(--whiteGeneral);
-    font-size: 30px;
+    font-size: 40px;
     padding: 0 10px;
 }
 

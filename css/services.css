@@ -30,7 +30,7 @@ main {
 .sectionOneSer {
     padding: 15px;
     color: var(--whiteGeneral);
-    background: url(../img/brocha_pintura.png) right bottom / contain no-repeat var(--greeGeneral);
+    background: url(../img/vista-superior-lata-pintura.jpg) right bottom / cover no-repeat;
 }
 
 .titleH1Ser {
