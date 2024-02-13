@@ -62,7 +62,7 @@ main {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
-.titleServis{
+.titleServis {
     font-weight: 500;
     padding: 15% 8px 5%;
     text-align: center;
@@ -70,14 +70,15 @@ main {
     line-height: 3rem;
 }
 
-.rowZigzagSer{
+.rowZigzagSer {
     display: flex;
     margin: 0 auto;
     height: auto;
     width: 80px;
     padding-bottom: 20px;
 }
-.textServis{
+
+.textServis {
     text-align: center;
     padding: 0 26px 50px;
     font-size: 25px;
@@ -92,7 +93,8 @@ main {
     gap: 40px;
     padding: 15px 0;
 }
-.containCardSer{
+
+.containCardSer {
     width: 90%;
     position: relative;
     display: flex;
@@ -105,7 +107,7 @@ main {
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-.containImg{
+.containImg {
     padding: 10px;
     width: 330px;
     height: auto;
@@ -119,20 +121,23 @@ main {
     cursor: pointer;
 }
 
-.containInfoSer{
+.containInfoSer {
     width: 100%;
     padding: 20px 10px;
 }
 
-.titleH2InfoSer{
+.titleH2InfoSer,
+.titleH2Faq {
+    text-align: center;
     font-size: 25px;
     padding-bottom: 14px;
-    color:var(--blackText);
+    color: var(--blackText);
     font-weight: 600;
 }
-.textH2Info{
+
+.textH2Info {
     font-size: 20px;
-    color:var(--blackText);
+    color: var(--blackText);
     font-weight: 300;
 }
 
@@ -142,39 +147,41 @@ main {
     border-radius: 3rem;
 }
 
-.TableForServcies, .TableForServcies th, .TableForServcies td {
+.TableForServcies,
+.TableForServcies th,
+.TableForServcies td {
     border: 1px solid #898989;
-    padding: 12px; 
+    padding: 12px;
     text-align: center;
 }
 
 .TableForServcies td:nth-child(1) {
     font-weight: 500;
-    background-color: #d6d6d6; 
+    background-color: #d6d6d6;
 }
 
 .TableForServcies td:nth-child(2) {
     background-color: white;
-    width: 30%; 
-    height: 50px; 
-    line-height: 50px; 
+    width: 30%;
+    height: 50px;
+    line-height: 50px;
 }
 
-.checkTableSer{
+.checkTableSer {
     font-size: 25px;
     color: var(--orangeGeneral);
 }
 
-.contianBtn-table{
+.contianBtn-table {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
 }
 
-.btn-services-table{
+.btn-services-table {
     height: 4rem;
     width: 15rem;
     margin: 30px 0;
@@ -183,21 +190,35 @@ main {
     border-radius: 0.5rem;
     color: var(--whiteGeneral);
     background-color: var(--orangeGeneral);
-    
+
 }
+
 .btn-services-table:hover {
     background-color: var(--whiteGeneral);
     color: var(--orangeGeneral);
     border: 4px solid var(--orangeGeneral);
 }
 
+.containImgH2Faq{
+    padding: 60px 0 30px;
+}
 
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-plus' viewBox='0 0 16 16'%3E%3Cpath d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/%3E%3C/svg%3E");
+    transition: all 0.5s;
+}
 
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-dash' viewBox='0 0 16 16'%3E%3Cpath d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/%3E%3C/svg%3E");
+}
 
-
-
-
-
-
-
-
+.accordion {
+    --bs-accordion-btn-bg: var(--orangeGeneral);
+    --bs-accordion-active-bg:black;
+    --bs-accordion-active-color:white;
+    --bs-accordion-bg: white;
+    --bs-accordion-btn-color: #ffff;
+    --bs-accordion-color: black;
+    --bs-accordion-btn-focus-box-shadow: none;
+    
+}
