@@ -18,7 +18,7 @@ body {
 }
 
 main {
-    padding: 30% 0;
+    padding: 20% 0;
 }
 
 .rowSliderSer {
@@ -28,28 +28,31 @@ main {
 }
 
 .sectionOneSer {
+    height: 500px;
     padding: 15px;
     color: var(--whiteGeneral);
-    background: url(../img/vista-superior-lata-pintura.jpg) right bottom / cover no-repeat;
+    background: url(../img/silder4.jpg) center / cover no-repeat;
 }
 
 .titleH1Ser {
+    padding: 30px 0 0;
     font-size: 60px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .titleH2ser {
-    font-size: 35px;
+    font-style: italic;
+    font-size: 30px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .buttonOneSer {
     height: 4rem;
     width: 20rem;
+    border: none;
     border-radius: 0.2rem;
-    background-color: var(--whiteGeneral);
-    border: 2px solid var(--orangeGeneral);
-    color: var(--orangeGeneral);
+    background-color: var(--orangeGeneral);
+    color: var(--whiteGeneral);
     margin: 20px 0;
     font-weight: 500;
 }
@@ -60,6 +63,7 @@ main {
 }
 
 .titleServis{
+    font-weight: 500;
     padding: 15% 8px 5%;
     text-align: center;
     font-size: 32px;
@@ -117,19 +121,80 @@ main {
 
 .containInfoSer{
     width: 100%;
-    padding: 20px;
+    padding: 20px 10px;
 }
 
 .titleH2InfoSer{
-    font-size: 20px;
+    font-size: 25px;
     padding-bottom: 14px;
     color:var(--blackText);
     font-weight: 600;
 }
 .textH2Info{
+    font-size: 20px;
     color:var(--blackText);
     font-weight: 300;
 }
+
+.TableForServcies {
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 3rem;
+}
+
+.TableForServcies, .TableForServcies th, .TableForServcies td {
+    border: 1px solid #898989;
+    padding: 12px; 
+    text-align: center;
+}
+
+.TableForServcies td:nth-child(1) {
+    font-weight: 500;
+    background-color: #d6d6d6; 
+}
+
+.TableForServcies td:nth-child(2) {
+    background-color: white;
+    width: 30%; 
+    height: 50px; 
+    line-height: 50px; 
+}
+
+.checkTableSer{
+    font-size: 25px;
+    color: var(--orangeGeneral);
+}
+
+.contianBtn-table{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.btn-services-table{
+    height: 4rem;
+    width: 15rem;
+    margin: 30px 0;
+    font-weight: 500;
+    border: none;
+    border-radius: 0.5rem;
+    color: var(--whiteGeneral);
+    background-color: var(--orangeGeneral);
+    
+}
+.btn-services-table:hover {
+    background-color: var(--whiteGeneral);
+    color: var(--orangeGeneral);
+    border: 4px solid var(--orangeGeneral);
+}
+
+
+
+
+
 
 
 
