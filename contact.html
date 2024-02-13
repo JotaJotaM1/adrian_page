@@ -51,43 +51,53 @@
                     <p></p>
                 </div>
                 <div class="container">
-                    <form class="row g-3 mt-3">
+                    <form class="row g-3 mt-3 needs-validation" novalidate >
                         <div class="col-6">
                             <label for="name" class="form-label">First Name</label>
                             <input type="text" class="form-control" id="name" placeholder="First Name" required>
+                            <div class="valid-feedback">Valid Name</div>
+                            <div class="invalid-feedback">Invalid name</div>
                         </div>
 
                         <div class="col-6">
                             <label for="lastname" class="form-label">Last Name</label>
                             <input type="text" class="form-control" id="lastname" placeholder="Last Name" required>
+                            <div class="valid-feedback">Valid Last Name</div>
+                            <div class="invalid-feedback">Invalid Last Name</div>
                         </div>
 
                         <div class="col-6">
                             <label for="phonenumber" class="form-label">Phone Number</label>
-                            <input type="text" class="form-control" id="phonenumber" placeholder="Phone Number"
-                                value="+1 " required>
+                            <input type="text" class="form-control" id="phonenumber" placeholder="Phone Number" value="+1 " required>
+                            <div class="valid-feedback">Valid Phone Number</div>
+                            <div class="invalid-feedback">Invalid Phone Number</div>
                         </div>
                         <div class="col-6">
                             <label for="email" class="form-label">Email</label>
                             <input type="email" class="form-control" id="email" placeholder="Email" required>
+                            <div class="valid-feedback">Valid Email</div>
+                            <div class="invalid-feedback">Invalid Email</div>
                         </div>
                         <div class="col-12">
                             <label for="addres" class="form-label">Addres</label>
                             <input type="text" class="form-control" id="addres" placeholder="Addres" required>
+                            <div class="valid-feedback">Valid Addres</div>
+                            <div class="invalid-feedback">Invalid Addres</div>
                         </div>
 
                         <div class="col-12">
                             <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" placeholder="Message" rows="6"
-                                required></textarea>
+                            <textarea class="form-control" id="message" placeholder="Message" rows="6"></textarea>
                         </div>
 
                         <div class="col-12">
                             <div class="form-check">
                                 <input type="checkbox" id="checkterms" class="form-check-input" required>
-                                <label for="checkterms" class="form-check-label">I accept the terms and
-                                    conditions</label>
+                                <label for="checkterms" class="form-check-label">I accept the terms and conditions</label>
+                                <div class="valid-feedback">Terms and conditions selected</div>
+                                <div class="invalid-feedback">You must select the terms and conditions</div>
                             </div>
+
                         </div>
                         <div class="col-3">
                             <button type="submit" class="btn btn-primary">Enviar</button>
