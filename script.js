@@ -1,5 +1,4 @@
 /* Responsive navigation menu in the header */
-
 const nav = document.querySelector("#nav");
 const open = document.querySelector("#open");
 const close = document.querySelector("#close");
@@ -13,55 +12,76 @@ close.addEventListener("click", () => {
 });
 
 /* Validation for form contact */
-
-// Example starter JavaScript for disabling form submissions if there are invalid fields
 (() => {
-  'use strict'
+  'use strict';
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll('.needs-validation')
+  const forms = document.querySelectorAll('.needs-validation');
 
-  // Loop over them and prevent submission
   Array.from(forms).forEach(form => {
     form.addEventListener('submit', event => {
       if (!form.checkValidity()) {
-        event.preventDefault()
-        event.stopPropagation()
+        event.preventDefault();
+        event.stopPropagation();
+        return; // Detener la ejecución si la validación no pasa
       }
 
-      form.classList.add('was-validated')
-    }, false)
-  })
-})()
+      // Validar número de teléfono
+      const phoneNumberInput = form.querySelector('#phonenumber');
+      if (!isValidPhoneNumber(phoneNumberInput.value.trim())) {
+        phoneNumberInput.setCustomValidity('Invalid Phone Number');
+        event.preventDefault();
+        event.stopPropagation();
+        return;
+      }
 
-/* To allow the +1 and not have it count as prior validation */
-
-document.addEventListener("DOMContentLoaded", function () {
-  var form = document.querySelector('.needs-validation');
-  var phoneNumberInput = document.getElementById('phonenumber');
-
-  form.addEventListener('submit', function (event) {
-    // Checks if the phone number field contains more than the initial value "+1"
-    if (phoneNumberInput.value.trim() === '+1' || phoneNumberInput.value.trim().length <= 3) {
-      // Manually adjusts the validation to display the specific error message
-      phoneNumberInput.setCustomValidity('Invalid Phone Number');
-    } else {
-      // Clears any previous custom validation state
-      phoneNumberInput.setCustomValidity('');
-    }
-
-    // Applies Bootstrap validation
-    if (!form.checkValidity()) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-
-    form.classList.add('was-validated');
-  }, false);
-
-  phoneNumberInput.addEventListener('input', function () {
-    if (phoneNumberInput.value.trim().length > 3) {
-      phoneNumberInput.setCustomValidity('');
-    }
+      form.classList.add('was-validated');
+    }, false);
   });
+})();
+
+// Función para validar el número de teléfono
+function isValidPhoneNumber(phoneNumber) {
+  // Aquí puedes implementar tu lógica de validación del número de teléfono
+  // Por ejemplo, verificar si tiene un formato válido
+  return phoneNumber.match(/^\+?\d{1,3}\d{9}$/); // Esta expresión regular valida números de 10 o más dígitos
+}
+
+/* sweetalert2@11 */
+const form = document.getElementById('contact-form');
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    var formData = new FormData(form);
+
+    fetch('http://localhost:3000/send-email', { // Cambiado a http://localhost:3000/send-email
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if(data.success) {
+            Swal.fire({
+                title: '¡Success!',
+                text: data.message,
+                icon: 'success',
+                confirmButtonText: 'Ok'
+            });
+        } else {
+            Swal.fire({
+                title: 'Error',
+                text: 'The email could not be sent.',
+                icon: 'error',
+                confirmButtonText: 'Ok'
+            });
+        }
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+        Swal.fire({
+            title: 'Error',
+            text: 'Hubo un problema al enviar el correo.',
+            icon: 'error',
+            confirmButtonText: 'Ok'
+        });
+    });
 });
