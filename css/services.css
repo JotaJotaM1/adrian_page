@@ -18,7 +18,7 @@ body {
 }
 
 main {
-    padding: 20% 0;
+    padding: 83px 0 0;
 }
 
 .rowSliderSer {
@@ -31,7 +31,7 @@ main {
     height: 500px;
     padding: 15px;
     color: var(--whiteGeneral);
-    background: url(../img/silder4.jpg) center / cover no-repeat;
+    background-color: black;
 }
 
 .titleH1Ser {
@@ -140,6 +140,9 @@ main {
     color: var(--blackText);
     font-weight: 300;
 }
+.containerTableSer{
+    width: 100%;
+}
 
 .TableForServcies {
     border-collapse: collapse;
@@ -221,4 +224,18 @@ main {
     --bs-accordion-color: black;
     --bs-accordion-btn-focus-box-shadow: none;
     
+}
+
+@media screen and (min-width: 768px){
+    .sectionOneSer, .containSer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .titleH1Ser, .titleH2ser{
+        text-align: center;
+        padding: 5px 109px;
+    }
 }
