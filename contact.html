@@ -46,16 +46,20 @@
     <main>
         <section>
             <div>
-                <div>
-                    <h1></h1>
-                    <p></p>
+                <div class="containH1">
+                    <h1 class="titleH1Cont">We're Ready to Listen: Contact Us</h1>
+                    <img class="rowZigzagCont" src="./img/zigzag-green.svg" alt="rowZigzagCont">
+                    <p class="textH2Cont"><span class="spanH1">EZ PAINT NOW</span> painting experts guaranteed quality
+                        and professionalism, let's bring your space to life! contact us now.</p>
+                    <i class="rowDown bi-arrow-down"></i>
+                    <i class="rowRight bi-arrow-right"></i>
                 </div>
                 <div class="container">
                     <form class="row g-3 mt-3 needs-validation" id="contact-form"
                         action="http://localhost:3000/send-email" method="post" novalidate>
 
                         <div class="col-6">
-                            <label for="name" class="form-label">First Name</label>
+                            <label for="name" class="form-label"></label>
                             <input type="text" class="form-control" name="name" placeholder="First Name" required
                                 autocomplete="given-name">
                             <div class="valid-feedback">Valid Name</div>
@@ -63,7 +67,7 @@
                         </div>
 
                         <div class="col-6">
-                            <label for="lastname" class="form-label">Last Name</label>
+                            <label for="lastname" class="form-label"></label>
                             <input type="text" class="form-control" name="lastname" placeholder="Last Name" required
                                 autocomplete="family-name">
                             <div class="valid-feedback">Valid Last Name</div>
@@ -71,21 +75,21 @@
                         </div>
 
                         <div class="col-6">
-                            <label for="phonenumber" class="form-label">Phone Number</label>
+                            <label for="phonenumber" class="form-label"></label>
                             <input type="text" class="form-control" name="phonenumber" placeholder="Phone Number"
                                 required autocomplete="tel">
                             <div class="valid-feedback">Valid Phone Number</div>
                             <div class="invalid-feedback">Invalid Phone Number</div>
                         </div>
                         <div class="col-6">
-                            <label for="email" class="form-label">Email</label>
+                            <label for="email" class="form-label"></label>
                             <input type="email" class="form-control" name="email" placeholder="Email" required
                                 autocomplete="email">
                             <div class="valid-feedback">Valid Email</div>
                             <div class="invalid-feedback">Invalid Email</div>
                         </div>
                         <div class="col-12">
-                            <label for="address" class="form-label">Address</label>
+                            <label for="address" class="form-label"></label>
                             <input type="text" class="form-control" name="address" placeholder="Address" required
                                 autocomplete="street-address">
                             <div class="valid-feedback">Valid Address</div>
@@ -93,7 +97,7 @@
                         </div>
 
                         <div class="col-12">
-                            <label for="message" class="form-label">Message</label>
+                            <label for="message" class="form-label"></label>
                             <textarea class="form-control" name="message" placeholder="Message" rows="6" required
                                 autocomplete="off"></textarea>
                         </div>
@@ -109,20 +113,17 @@
 
                         </div>
                         <div class="col-3">
-                            <button type="submit" class="btn btn-primary">Enviar</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
                         </div>
 
                         <div class="col-3">
-                            <button type="reset" class="btn btn-secondary">Resetear</button>
+                            <button type="reset" class="btn btn-secondary">Reset</button>
                         </div>
                     </form>
                 </div>
             </div>
         </section>
         <section>
-            <div>
-                <!-- <p>llamado a la accion</p> -->
-            </div>
         </section>
 
 
@@ -142,17 +143,17 @@
                 <div class="containInfoEmail">
                     <i class="iconFooter bi-envelope"></i>
                     <a href="mailto:info@alaska.puffcleaning.com?subject=Book Now" class="mailto-link">
-                        <p class="textEmail">ejemplo@ejemplo.gamil.com</p>
+                        <p class="textEmail">service@ezpaintnow.com</p>
                     </a>
                 </div>
                 <div class="containInfoLocation">
                     <i class="iconFooter bi-geo-alt-fill"></i>
-                    <p class="textLocation">666 Ciudad, Referencia</p>
+                    <p class="textLocation">USA, Florida</p>
                 </div>
                 <div class="containInfoPhone">
                     <i class="iconFooter bi-telephone-fill"></i>
-                    <a href="tel:+1 305 999 8545" class="tel-link">
-                        <p class="textPhone">+1 123 456 78910</p>
+                    <a href="tel:+14076163856" class="tel-link">
+                        <p class="textPhone">+14076163856</p>
                     </a>
                 </div>
             </div>
