@@ -107,7 +107,7 @@ main,
 .buttonOTwoSlider:hover {
     background-color: black;
     color: white;
-    
+
 }
 
 .containGeneralCard,
@@ -210,7 +210,7 @@ main,
     margin: 40px 0;
 }
 
-.sectionWhyChoose{
+.sectionWhyChoose {
     width: 100%;
     background-color: black;
     color: var(--whiteGeneral);
@@ -242,14 +242,14 @@ main,
 }
 
 .sectionCallToAction {
-    height:65vh;
+    height: 65vh;
     text-align: left;
     padding: 40px 30px;
     background: url(../img/pintando-pared.jpg) no-repeat bottom right/contain;
     background-color: var(--orangeGeneral);
 }
 
-.textOneCall{
+.textOneCall {
     text-align: left;
     padding: 10px 0;
     font-size: 41px;
