@@ -308,3 +308,34 @@ main,
     font-size: 20px;
     line-height: 1.344em;
 }
+
+@media screen and (min-width: 768px) {
+
+    .textH2Services {
+        padding: 0 110px 50px;
+    }
+
+    .textH3Services {
+        text-align: center;
+        padding: 0px 118px 50px;
+    }
+
+    .titleH2Services{
+        padding: 5% 8px;
+    }
+
+    .textAboutUs{
+        padding: 0 50px 60px;
+    }
+
+    .containAboutUs {
+        padding: 20px 60px;
+    }
+    .sectionCallToAction{
+        height: 330px;
+    }
+    .textOneCall{
+        text-align: center;
+        padding: 10px 40px;
+    }
+}
