@@ -320,22 +320,90 @@ main,
         padding: 0px 118px 50px;
     }
 
-    .titleH2Services{
+    .titleH2Services {
         padding: 5% 8px;
     }
 
-    .textAboutUs{
+    .textAboutUs {
         padding: 0 50px 60px;
     }
 
     .containAboutUs {
         padding: 20px 60px;
     }
-    .sectionCallToAction{
+
+    .sectionCallToAction {
         height: 330px;
     }
-    .textOneCall{
+
+    .textOneCall {
         text-align: center;
         padding: 10px 40px;
     }
+}
+
+@media screen and (min-width: 768px) {
+
+    .titleH1Slider {
+        padding: 0 21%;
+    }
+
+    .titleH2Slider {
+        padding: 20px 28%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .textH2Services {
+        padding: 0 21% 93px;
+    }
+
+    .textH3Services {
+        padding: 0px 7% 50px;
+    }
+
+    .containCardServices {
+        display: flex;
+    }
+
+    .cardServices {
+        width: 50%;
+    }
+
+    .imgCardServiceThree,
+    .imgCardServiceFour {
+        height: 280px;
+        width: 280px;
+    }
+
+    .textOneCall {
+        padding: 30px 171px;
+    }
+
+    .textAboutUs {
+        padding: 0 19% 60px;
+    }
+
+    .sectionCallToAction {
+        height: 450px;
+    }
+    .containAboutUs {
+        padding: 20px 15px;
+    }
+
+    .containH4AboutUs {
+        width: 33%;
+        text-align: center;
+        padding: 27px 17px;
+        border-radius: 1rem;
+        border: 1px solid #d9d9d9;
+        box-shadow: 0px 0px 9px -5px var(--orangeGeneral);
+    }
+    .containG-H4{
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
 }
