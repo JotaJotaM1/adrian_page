@@ -1,30 +1,31 @@
+require('dotenv').config();
 const express = require('express');
-const bodyParser = require('body-parser');
 const sgMail = require('@sendgrid/mail');
-const cors = require('cors'); // Importa el middleware cors
+const cors = require('cors');
 
 const app = express();
 const PORT = 3000;
 
-sgMail.setApiKey('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');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors()); // Usa el middleware cors para habilitar CORS
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 app.post('/send-email', async (req, res) => {
-    const { name, lastname, email, phonenumber, message } = req.body;
-
+    console.log(req.body);
+    const { name, lastname, email, phonenumber, message, address } = req.body;
     const content = `
-        Nombre: ${name} ${lastname}
+        Name: ${name} ${lastname}
         Email: ${email}
-        Teléfono: ${phonenumber}
-        Mensaje: ${message}
+        Phone: ${phonenumber}
+        Message: ${message}
+        Address: ${address}
     `;
 
     const msg = {
-        to: 'service@ezpaintnow.com',
-        from: 'service@ezpaintnow.com',
+        to: process.env.EMAIL_TO,
+        from: process.env.EMAIL_FROM,
         subject: 'New contact message',
         text: content,
     };
@@ -34,9 +35,10 @@ app.post('/send-email', async (req, res) => {
         res.json({ success: true, message: "Email sent successfully" });
     } catch (error) {
         console.error('Error sending the email:', error);
-        res.status(500).send('Error sending the email');
+        res.status(500).json({ success: false, message: "Error sending the email" });
     }
 });
+
 
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);

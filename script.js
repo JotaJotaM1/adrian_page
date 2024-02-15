@@ -1,4 +1,4 @@
-/* Responsive navigation menu in the header */
+/* Header nav responsive */
 const nav = document.querySelector("#nav");
 const open = document.querySelector("#open");
 const close = document.querySelector("#close");
@@ -11,77 +11,57 @@ close.addEventListener("click", () => {
   nav.classList.remove("visible");
 });
 
-/* Validation for form contact */
-(() => {
-  'use strict';
+/* Script to validate and submit form data as JSON, displaying success or error alerts with SweetAlert2. */
 
-  const forms = document.querySelectorAll('.needs-validation');
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('contact-form');
 
-  Array.from(forms).forEach(form => {
-    form.addEventListener('submit', event => {
-      if (!form.checkValidity()) {
-        event.preventDefault();
-        event.stopPropagation();
-        return; // Detener la ejecución si la validación no pasa
+  form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      form.classList.add('was-validated'); // Activate Bootstrap visual validation
+
+      if (form.checkValidity()) {
+          // Collect form data and convert it to a JSON object
+          const formData = new FormData(form);
+          const data = Object.fromEntries(formData.entries());
+
+          fetch('http://localhost:3000/send-email', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json', // Specify that the body is JSON
+              },
+              body: JSON.stringify(data) // Convert form data to a JSON string
+          })
+          .then(response => response.json())
+          .then(data => {
+              if(data.success) {
+                  Swal.fire({
+                      title: 'Success!',
+                      text: data.message,
+                      icon: 'success',
+                      confirmButtonText: 'Ok'
+                  });
+              } else {
+                  Swal.fire({
+                      title: 'Error',
+                      text: 'The email could not be sent.',
+                      icon: 'error',
+                      confirmButtonText: 'Ok'
+                  });
+              }
+          })
+          .catch((error) => {
+              console.error('Error:', error);
+              Swal.fire({
+                  title: 'Error',
+                  text: 'There was a problem sending the email.',
+                  icon: 'error',
+                  confirmButtonText: 'Ok'
+              });
+          });
+      } else {
+          console.error('The form is invalid.');
       }
-
-      // Validar número de teléfono
-      const phoneNumberInput = form.querySelector('#phonenumber');
-      if (!isValidPhoneNumber(phoneNumberInput.value.trim())) {
-        phoneNumberInput.setCustomValidity('Invalid Phone Number');
-        event.preventDefault();
-        event.stopPropagation();
-        return;
-      }
-
-      form.classList.add('was-validated');
-    }, false);
   });
-})();
-
-// Función para validar el número de teléfono
-function isValidPhoneNumber(phoneNumber) {
-  // Aquí puedes implementar tu lógica de validación del número de teléfono
-  // Por ejemplo, verificar si tiene un formato válido
-  return phoneNumber.match(/^\+?\d{1,3}\d{9}$/); // Esta expresión regular valida números de 10 o más dígitos
-}
-
-/* sweetalert2@11 */
-const form = document.getElementById('contact-form');
-form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    var formData = new FormData(form);
-
-    fetch('http://localhost:3000/send-email', { // Cambiado a http://localhost:3000/send-email
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        if(data.success) {
-            Swal.fire({
-                title: '¡Success!',
-                text: data.message,
-                icon: 'success',
-                confirmButtonText: 'Ok'
-            });
-        } else {
-            Swal.fire({
-                title: 'Error',
-                text: 'The email could not be sent.',
-                icon: 'error',
-                confirmButtonText: 'Ok'
-            });
-        }
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-        Swal.fire({
-            title: 'Error',
-            text: 'Hubo un problema al enviar el correo.',
-            icon: 'error',
-            confirmButtonText: 'Ok'
-        });
-    });
 });
