@@ -36,15 +36,16 @@
     color: transparent; 
 }
 
-#btn-mas {
-    display: none;
+.containerBtnFixed {
+    position: absolute;
+    z-index: 9999;
+    bottom: 20px;
+    right: 20px;
+
 }
 
-.containerBtnFixed {
-    position: fixed;
-    z-index: 9999;
-    bottom: 15px;
-    right: 15px;
+#btn-mas {
+    display: none;
 }
 
 .redes {

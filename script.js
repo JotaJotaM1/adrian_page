@@ -65,3 +65,32 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+/* The floating fixed button adjusts to a fixed position according to its parent sectionBody */
+
+document.addEventListener("scroll", function () {
+  const botonFlotante = document.querySelector(".containerBtnFixed");
+  const seccion = document.querySelector(".sectionBody");
+  const rectSeccion = seccion.getBoundingClientRect();
+
+  // Condición para mantener el botón dentro de los límites de sectionBody
+  if (rectSeccion.top < 0 && rectSeccion.bottom > window.innerHeight) {
+    botonFlotante.style.position = "fixed";
+    botonFlotante.style.bottom = "25px";
+    // Ajustamos el botón a la derecha con una separación de 20px del contenedor sectionBody
+    botonFlotante.style.right = `${
+      window.innerWidth - rectSeccion.right + 25
+    }px`;
+    botonFlotante.style.left = "auto"; // Aseguramos que la propiedad left no interfiera
+  } else {
+    botonFlotante.style.position = "absolute";
+    botonFlotante.style.bottom = "25px";
+    // Cuando el botón debe posicionarse en la parte inferior derecha de sectionBody
+    if (rectSeccion.bottom <= window.innerHeight) {
+      botonFlotante.style.right = "25px"; // Mantenemos la separación de 20px del borde derecho
+    } else {
+      botonFlotante.style.right = "25px";
+    }
+    botonFlotante.style.left = "auto"; // Aseguramos que la propiedad left no interfiera
+  }
+});

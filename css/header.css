@@ -23,6 +23,7 @@
   background: var(--blackGeneral);
   box-shadow: 0px 1px 10px 0px #E64C34;
   z-index: 999;
+  max-width: 1440px;
 }
 
 .fatherlogoHeader {

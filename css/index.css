@@ -16,6 +16,18 @@
 
 body {
     font-family: "Montserrat", sans-serif;
+    background-color: #f1f1f1;
+}
+
+main {
+    background-color: white;
+}
+
+.sectionBody {
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 100vh;
 }
 
 main,
@@ -340,10 +352,6 @@ main,
         text-align: center;
         padding: 10px 40px;
     }
-}
-
-@media screen and (min-width: 768px) {
-
     .titleH1Slider {
         padding: 0 21%;
     }
@@ -353,6 +361,7 @@ main,
     }
 }
 
+
 @media screen and (min-width: 1024px) {
 
     .sectionCallToAction {
@@ -360,7 +369,6 @@ main,
         height: 600px;
         justify-content: center;
         align-items: center;
-
     }
 
     .textH2Services {
@@ -416,4 +424,35 @@ main,
         gap: 15px;
     }
 
+}
+
+@media screen and (min-width: 1440px) {
+    .sectionSlider {
+        height: 780px;
+    }
+
+    .titleH2Services {
+        padding: 3% 8px;
+        font-size: 50px;
+    }
+
+    .containAboutUs {
+        padding: 20px 50px;
+    }
+
+    .containH4AboutUs {
+        width: 27%;
+    }
+
+    .textAboutUs {
+        padding: 0 27% 60px;
+    }
+
+    .containG-H4 {
+        justify-content: space-evenly;
+    }
+
+    .textH3Services {
+        padding: 0px 19% 50px;
+    }
 }

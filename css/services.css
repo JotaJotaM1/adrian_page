@@ -15,10 +15,18 @@
 
 body {
     font-family: "Montserrat", sans-serif;
+    background-color: #f1f1f1;
+}
+
+.sectionBody {
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 100vh;
 }
 
 main {
-    padding: 83px 0 0;
+    background-color: white;
 }
 
 .rowSliderSer {
@@ -289,6 +297,29 @@ main {
     .p-2 {
         padding: 0.5rem 10rem 3rem !important;
     }
+}
 
+@media screen and (min-width: 1440px) {
 
+    .titleServis{
+        padding: 10% 8px 2%;
+        font-size: 50px;
+    }
+    .textServis {
+        padding: 0px 26% 50px
+    }
+
+    .titleH1Ser,
+    .titleH2ser {
+        text-align: center;
+        padding: 5px 0%;
+    }
+
+    .titleH1Ser {
+        font-size: 85px;
+    }
+
+    .p-2 {
+        padding: 0.5rem 15rem 3rem !important;
+    }
 }
