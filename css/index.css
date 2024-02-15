@@ -355,6 +355,14 @@ main,
 
 @media screen and (min-width: 1024px) {
 
+    .sectionCallToAction {
+        display: flex;
+        height: 600px;
+        justify-content: center;
+        align-items: center;
+
+    }
+
     .textH2Services {
         padding: 0 21% 93px;
     }
@@ -388,6 +396,7 @@ main,
     .sectionCallToAction {
         height: 450px;
     }
+
     .containAboutUs {
         padding: 20px 15px;
     }
@@ -400,7 +409,8 @@ main,
         border: 1px solid #d9d9d9;
         box-shadow: 0px 0px 9px -5px var(--orangeGeneral);
     }
-    .containG-H4{
+
+    .containG-H4 {
         display: flex;
         justify-content: space-between;
         gap: 15px;
