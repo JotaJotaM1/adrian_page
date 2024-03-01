@@ -85,20 +85,3 @@ document.addEventListener("DOMContentLoaded", function () {
     false
   );
 });
-
-function toggleWebsiteInput() {
-  const hasWebsite = document.getElementById("hasWebsite").value;
-  const websiteInput = document.getElementById("website");
-
-  if (hasWebsite === "yes") {
-    websiteInput.disabled = false;
-    websiteInput.required = true;
-    websiteInput.focus();
-  } else {
-    websiteInput.disabled = true;
-    websiteInput.required = false;
-    websiteInput.value = "";
-  }
-};
-
-document.getElementById("hasWebsite").addEventListener("change", toggleWebsiteInput);
